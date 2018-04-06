@@ -1,13 +1,17 @@
-# ABC-Laboratory
+ABC-Laboratory
+======
+
 ABC-Laboratory is a prototypical simulation software calculating the fluorescence or absorption of different 'biomolecules'. 
 It uses the Godot Game Engive (v.3) and is the result of the Bachelor Hands-on / internship during the winter semester 2017/2018 
 at TU Darmstadt, Germany. 
 
-# How to use the source code or even the software
-Currently, you can only clone this repository and import it in the Godot Game Engine (v3) by yourself. I am going to provide a downloadable
+How to use the source code or even the software
+======
+Currently, you can only **clone this repository and import it in the Godot Game Engine (v3)** by yourself. I am going to provide a downloadable
 .exe to execute the simulation directly on your local machine.
 
-# What is the goal?
+What is the goal?
+======
 From now on, I am neither working in the team from the beginning nor am I working for Katja Schmitz or Kai Hamacher.
 So I am going to fix some bug fixes and provide some more essential features. 
 Here is an example: 
