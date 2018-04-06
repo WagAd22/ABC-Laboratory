@@ -1,0 +1,62 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scene/Main/Main.gd" type="Script" id=1]
+[ext_resource path="res://Scene/Startmenu/Startmenu.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scene/Arbeitsplatte/Arbeitsplatte.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scene/Vorratsschrank/Vorratsschrank.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scene/Messgeraet/Messgeraet.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scene/Tutorial/Tutorial.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scene/UI/UI.tscn" type="PackedScene" id=7]
+
+[node name="Main" type="Node2D" index="0"]
+
+position = Vector2( -1.33377, -0.440948 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Startmenu" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="Arbeitsplatte" parent="." index="1" instance=ExtResource( 3 )]
+
+visible = false
+
+[node name="Vorratsschrank" parent="." index="2" instance=ExtResource( 4 )]
+
+visible = false
+
+[node name="Messgeraet" parent="." index="3" instance=ExtResource( 5 )]
+
+visible = false
+
+[node name="Tutorial" parent="." index="4" instance=ExtResource( 6 )]
+
+visible = false
+
+[node name="UI" parent="." index="5" instance=ExtResource( 7 )]
+
+visible = false
+
+[connection signal="about" from="Startmenu" to="." method="about"]
+
+[connection signal="game_prepare" from="Startmenu" to="." method="game_prepare"]
+
+[connection signal="game_start" from="Startmenu" to="." method="game_start_new"]
+
+[connection signal="help" from="Startmenu" to="." method="help"]
+
+[connection signal="quit" from="Startmenu" to="." method="quit_game"]
+
+[connection signal="tutorial" from="Startmenu" to="." method="tutorial"]
+
+[connection signal="arbeitsplatte" from="UI" to="." method="switch_to_arbeitsplatte"]
+
+[connection signal="messgeraet" from="UI" to="." method="switch_to_messgeraet"]
+
+[connection signal="startmenu" from="UI" to="." method="switch_to_startmenu"]
+
+[connection signal="vorratsschrank" from="UI" to="." method="switch_to_vorratsschrank"]
+
+

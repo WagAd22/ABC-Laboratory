@@ -1,0 +1,401 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Scene/Arbeitsplatte/PipettenRack.gd" type="Script" id=1]
+[ext_resource path="res://Texture/pipettenRack.png" type="Texture" id=2]
+[ext_resource path="res://Scene/Arbeitsplatte/PipetteMain.gd" type="Script" id=3]
+[ext_resource path="res://Scene/Arbeitsplatte/Pipette10.gd" type="Script" id=4]
+[ext_resource path="res://Texture/pipe10.png" type="Texture" id=5]
+[ext_resource path="res://Texture/Spitze_weiss.png" type="Texture" id=6]
+[ext_resource path="res://pipetteFont.font" type="BitmapFont" id=7]
+[ext_resource path="res://Scene/Arbeitsplatte/Pipette20.gd" type="Script" id=8]
+[ext_resource path="res://Texture/pipe20.png" type="Texture" id=9]
+[ext_resource path="res://Texture/Spitze_gelb.png" type="Texture" id=10]
+[ext_resource path="res://Scene/Arbeitsplatte/Pipette200.gd" type="Script" id=11]
+[ext_resource path="res://Texture/pipe200.png" type="Texture" id=12]
+[ext_resource path="res://Scene/Arbeitsplatte/Pipette1000.gd" type="Script" id=13]
+[ext_resource path="res://Texture/pipe1000.png" type="Texture" id=14]
+[ext_resource path="res://Texture/Spitze_blau.png" type="Texture" id=15]
+
+[node name="PipettenRack" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PipettenRack" type="TextureRect" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 860.0
+margin_top = 80.0
+margin_right = 1360.0
+margin_bottom = 170.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="PipetteMain" type="Node2D" parent="." index="1"]
+
+script = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Pipette10" type="Node2D" parent="PipetteMain" index="0"]
+
+position = Vector2( 1000, 120 )
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="Koerper10" type="TextureRect" parent="PipetteMain/Pipette10" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -260.0
+margin_top = -240.0
+margin_right = 40.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+
+[node name="Spitze10" type="TextureRect" parent="PipetteMain/Pipette10/Koerper10" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 262.0
+margin_top = 220.0
+margin_right = 287.0
+margin_bottom = 245.0
+rect_rotation = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="PipetteMain/Pipette10" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -130.0
+margin_top = -200.0
+margin_right = 20.0
+margin_bottom = -160.0
+rect_rotation = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "Theme", "custom_colors", "custom_fonts" ]
+
+[node name="Pipette20" type="Node2D" parent="PipetteMain" index="1"]
+
+position = Vector2( 1090, 120 )
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Koerper20" type="TextureRect" parent="PipetteMain/Pipette20" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -260.0
+margin_top = -240.0
+margin_right = 40.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 9 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+
+[node name="Spitze20" type="TextureRect" parent="PipetteMain/Pipette20/Koerper20" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 262.0
+margin_top = 220.0
+margin_right = 287.0
+margin_bottom = 245.0
+rect_rotation = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="PipetteMain/Pipette20" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -130.0
+margin_top = -200.0
+margin_right = 20.0
+margin_bottom = -160.0
+rect_rotation = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Pipette200" type="Node2D" parent="PipetteMain" index="2"]
+
+position = Vector2( 1180, 120 )
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 11 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Koerper200" type="TextureRect" parent="PipetteMain/Pipette200" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -260.0
+margin_top = -240.0
+margin_right = 40.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 12 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+
+[node name="Spitze200" type="TextureRect" parent="PipetteMain/Pipette200/Koerper200" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 262.0
+margin_top = 220.0
+margin_right = 287.0
+margin_bottom = 245.0
+rect_rotation = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="PipetteMain/Pipette200" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -130.0
+margin_top = -200.0
+margin_right = 20.0
+margin_bottom = -160.0
+rect_rotation = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Pipette1000" type="Node2D" parent="PipetteMain" index="3"]
+
+position = Vector2( 1270, 120 )
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 13 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Koerper1000" type="TextureRect" parent="PipetteMain/Pipette1000" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -260.0
+margin_top = -240.0
+margin_right = 40.0002
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 14 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+
+[node name="Spitze1000" type="TextureRect" parent="PipetteMain/Pipette1000/Koerper1000" index="0"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 262.0
+margin_top = 220.0
+margin_right = 287.0
+margin_bottom = 245.0
+rect_rotation = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 15 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="PipetteMain/Pipette1000" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -130.0
+margin_top = -200.0
+margin_right = 20.0
+margin_bottom = -160.0
+rect_rotation = 42.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect", "custom_colors", "custom_fonts" ]
+
+[node name="Pipettenrack_Control" type="Control" parent="." index="2"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 880.0
+margin_top = 60.0
+margin_right = 1340.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 230, 60 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Rect", "Visibility" ]
+
+[connection signal="mouse_entered" from="PipetteMain/Pipette10/Koerper10" to="." method="_on_Koerper10_mouse_entered"]
+
+[connection signal="mouse_exited" from="PipetteMain/Pipette10/Koerper10" to="." method="_on_Koerper_mouse_exited"]
+
+[connection signal="mouse_entered" from="PipetteMain/Pipette20/Koerper20" to="." method="_on_Koerper20_mouse_entered"]
+
+[connection signal="mouse_exited" from="PipetteMain/Pipette20/Koerper20" to="." method="_on_Koerper20_mouse_exited"]
+
+[connection signal="mouse_entered" from="PipetteMain/Pipette200/Koerper200" to="." method="_on_Koerper200_mouse_entered"]
+
+[connection signal="mouse_exited" from="PipetteMain/Pipette200/Koerper200" to="." method="_on_Koerper200_mouse_exited"]
+
+[connection signal="mouse_entered" from="PipetteMain/Pipette1000/Koerper1000" to="." method="_on_Koerper1000_mouse_entered"]
+
+[connection signal="mouse_exited" from="PipetteMain/Pipette1000/Koerper1000" to="." method="_on_Koerper1000_mouse_exited"]
+
+[connection signal="mouse_entered" from="Pipettenrack_Control" to="." method="_on_Pipettenrack_Control_mouse_entered"]
+
+[connection signal="mouse_exited" from="Pipettenrack_Control" to="." method="_on_Pipettenrack_Control_mouse_exited"]
+
+

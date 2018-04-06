@@ -1,0 +1,15 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+valid=false
+
+[deps]
+
+source_file="res://Parameter/Parameter_reagenz.csv"
+source_md5="62edc8253a3a853719e91b102019507b"
+
+[params]
+
+compress=true
+delimiter=0

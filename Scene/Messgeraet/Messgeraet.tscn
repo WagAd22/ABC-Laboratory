@@ -1,0 +1,935 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Script/messgeraet/Messgeraet.gd" type="Script" id=1]
+[ext_resource path="res://Scene/Messgeraet/Einstellungen.gd" type="Script" id=2]
+[ext_resource path="res://Scene/Arbeitsplatte/Mikrotiterplatte.tscn" type="PackedScene" id=3]
+
+[node name="Messgeraet" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Anchor" ]
+
+[node name="Panel" type="Panel" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -10.0
+margin_top = -6.0
+margin_right = 1369.0
+margin_bottom = 774.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="Einstellungen" type="Node" parent="." index="1"]
+
+script = ExtResource( 2 )
+
+[node name="ConfirmationDialog" type="ConfirmationDialog" parent="Einstellungen" index="0"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 374.0
+margin_top = 193.0
+margin_right = 974.0
+margin_bottom = 593.0
+rect_min_size = Vector2( 200, 70 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = true
+window_title = "Parameter eingeben"
+resizable = false
+dialog_hide_on_ok = true
+_sections_unfolded = [ "Popup", "Rect" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="Einstellungen/ConfirmationDialog" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 592.0
+margin_bottom = 364.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/margin_right = 5
+custom_constants/margin_top = 5
+custom_constants/margin_left = 5
+custom_constants/margin_bottom = 5
+_sections_unfolded = [ "Margin", "Rect", "custom_constants" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Einstellungen/ConfirmationDialog/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 579.0
+margin_bottom = 351.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 10
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Mikroplatte_auswahlen" type="Label" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 574.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+text = "Mikrotiterplatte auswählen:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HSeparator" type="HSeparator" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer" index="1"]
+
+modulate = Color( 1, 1, 1, 0.5 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 24.0
+margin_right = 574.0
+margin_bottom = 28.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 38.0
+margin_right = 574.0
+margin_bottom = 58.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="Wells" type="Label" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 36.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Wells"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="OptionButton_Wells" type="OptionButton" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 40.0
+margin_right = 79.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="HSeparator2" type="HSeparator" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer" index="3"]
+
+modulate = Color( 1, 1, 1, 0.5 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 68.0
+margin_right = 574.0
+margin_bottom = 72.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 82.0
+margin_right = 574.0
+margin_bottom = 102.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="Farbe" type="Label" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer3" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 35.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Farbe"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="OptionButton" type="OptionButton" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer3" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 39.0
+margin_right = 78.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="HSeparator3" type="HSeparator" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer" index="5"]
+
+modulate = Color( 1, 1, 1, 0.5 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 112.0
+margin_right = 574.0
+margin_bottom = 116.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Konfig_auswaehlen" type="Label" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer" index="6"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 126.0
+margin_right = 574.0
+margin_bottom = 140.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+text = "Konfiguration auswählen:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HSeparator4" type="HSeparator" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer" index="7"]
+
+modulate = Color( 1, 1, 1, 0.5 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 150.0
+margin_right = 574.0
+margin_bottom = 154.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer" index="8"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 164.0
+margin_right = 574.0
+margin_bottom = 184.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="Messmethode" type="Label" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer4" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 92.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Messmethode"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="OptionButton_Messen" type="OptionButton" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer4" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 96.0
+margin_right = 135.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="HSeparator5" type="HSeparator" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer" index="9"]
+
+modulate = Color( 1, 1, 1, 0.5 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 194.0
+margin_right = 574.0
+margin_bottom = 198.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer" index="10"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 208.0
+margin_right = 574.0
+margin_bottom = 228.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+_sections_unfolded = [ "Rect" ]
+
+[node name="Wellenlaenge" type="Label" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer5" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 3.0
+margin_right = 79.0
+margin_bottom = 17.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Wellenlänge"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="OptionButton_WL_Anregung_Emission" type="OptionButton" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer5" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 83.0
+margin_right = 122.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+
+[node name="OptionButton_WL_Absorption" type="OptionButton" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer5" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 126.0
+margin_right = 165.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+
+[node name="OptionButton_WL_Anregung_Emission2" type="OptionButton" parent="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer5" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 169.0
+margin_right = 208.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+
+[node name="ConfirmationDialog2" type="ConfirmationDialog" parent="Einstellungen" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 374.0
+margin_top = 194.0
+margin_right = 974.0
+margin_bottom = 594.0
+rect_min_size = Vector2( 200, 70 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = true
+window_title = "Auswahl der Wells"
+resizable = false
+dialog_hide_on_ok = true
+_sections_unfolded = [ "Popup", "Rect" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="Einstellungen/ConfirmationDialog2" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 592.0
+margin_bottom = 364.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Margin", "Rect" ]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Einstellungen/ConfirmationDialog2/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_right = 584.0
+margin_bottom = 356.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Label" type="Label" parent="Einstellungen/ConfirmationDialog2/MarginContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 576.0
+margin_bottom = 82.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Bitte fahren Sie mit der Maus und gedrückter STRG/CTRL- und A-Taste über die Wells, die gemessen werden sollen. Alternativ einzelne Wells mit der linken Maustaste auswählen.
+Falls Sie Wells auswählen, die Sie nicht mehr messen wollen, dann fahren Sie mit der Maus und gedrückter STRG/CTRL- und S-Taste über die Wells. Alternativ einzelne Wells mit der rechten Maustaste abwählen."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Rect" ]
+
+[node name="Mikrotiterplatte" parent="Einstellungen/ConfirmationDialog2" index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 295.622, 225.104 )
+
+[node name="ConfirmationDialog3" type="ConfirmationDialog" parent="Einstellungen" index="2"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 372.0
+margin_top = 190.0
+margin_right = 972.0
+margin_bottom = 590.0
+rect_min_size = Vector2( 200, 70 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = true
+window_title = "Bitte bestätigen..."
+resizable = false
+dialog_hide_on_ok = true
+_sections_unfolded = [ "Popup", "Rect" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="Einstellungen/ConfirmationDialog3" index="3"]
+
+editor/display_folded = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 592.0
+margin_bottom = 364.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Einstellungen/ConfirmationDialog3/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_right = 584.0
+margin_bottom = 356.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 15
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Kinetik" type="Label" parent="Einstellungen/ConfirmationDialog3/MarginContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 576.0
+margin_bottom = 14.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Kinetik"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HSeparator" type="HSeparator" parent="Einstellungen/ConfirmationDialog3/MarginContainer/VBoxContainer" index="1"]
+
+modulate = Color( 1, 1, 1, 0.5 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 29.0
+margin_right = 576.0
+margin_bottom = 33.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Einstellungen/ConfirmationDialog3/MarginContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 48.0
+margin_right = 576.0
+margin_bottom = 72.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Zyklen" type="Label" parent="Einstellungen/ConfirmationDialog3/MarginContainer/VBoxContainer/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 5.0
+margin_right = 79.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Messzyklen:"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="SpinBox_Zyklen" type="SpinBox" parent="Einstellungen/ConfirmationDialog3/MarginContainer/VBoxContainer/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 83.0
+margin_right = 157.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 1.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 1.0
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="HSeparator2" type="HSeparator" parent="Einstellungen/ConfirmationDialog3/MarginContainer/VBoxContainer" index="3"]
+
+modulate = Color( 1, 1, 1, 0.4 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 87.0
+margin_right = 576.0
+margin_bottom = 91.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Visibility" ]
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Einstellungen/ConfirmationDialog3/MarginContainer/VBoxContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 106.0
+margin_right = 576.0
+margin_bottom = 130.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 0
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Intervall" type="Label" parent="Einstellungen/ConfirmationDialog3/MarginContainer/VBoxContainer/HBoxContainer2" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 5.0
+margin_right = 147.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Intervall (in Sekunden):"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="SpinBox_Intervall" type="SpinBox" parent="Einstellungen/ConfirmationDialog3/MarginContainer/VBoxContainer/HBoxContainer2" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 147.0
+margin_right = 221.0
+margin_bottom = 24.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.1
+max_value = 9999.0
+step = 0.1
+page = 0.0
+value = 0.1
+exp_edit = false
+rounded = false
+editable = true
+prefix = ""
+suffix = ""
+
+[node name="FileDialog" type="FileDialog" parent="Einstellungen" index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 235.0
+margin_top = 100.0
+margin_right = 835.0
+margin_bottom = 500.0
+rect_min_size = Vector2( 200, 70 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = true
+window_title = "Save a File"
+resizable = false
+dialog_hide_on_ok = false
+mode_overrides_title = true
+mode = 4
+access = 2
+filters = PoolStringArray(  )
+show_hidden_files = false
+current_dir = "D:/Studium/workspace/ps65vagy-bachelor-praktikum-ws-17-18-gruppe-22/bp 22/_Portierung"
+current_file = ""
+current_path = "D:/Studium/workspace/ps65vagy-bachelor-praktikum-ws-17-18-gruppe-22/bp 22/_Portierung/"
+_sections_unfolded = [ "Popup", "Rect" ]
+
+[connection signal="draw" from="." to="." method="_on_Messgeraet_draw"]
+
+[connection signal="draw" from="." to="Einstellungen" method="_on_Messgeraet_draw"]
+
+[connection signal="hide" from="." to="." method="_on_Messgeraet_hide"]
+
+[connection signal="confirmed" from="Einstellungen/ConfirmationDialog" to="Einstellungen" method="_on_ConfirmationDialog_confirmed"]
+
+[connection signal="item_selected" from="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer2/OptionButton_Wells" to="Einstellungen" method="_on_OptionButton_Wells_item_selected"]
+
+[connection signal="item_selected" from="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer3/OptionButton" to="Einstellungen" method="update_messmethode"]
+
+[connection signal="item_selected" from="Einstellungen/ConfirmationDialog/MarginContainer/VBoxContainer/HBoxContainer5/OptionButton_WL_Absorption" to="Einstellungen" method="_on_OptionButton_WL_Absorption_item_selected"]
+
+[connection signal="confirmed" from="Einstellungen/ConfirmationDialog2" to="Einstellungen" method="_on_ConfirmationDialog2_confirmed"]
+
+[connection signal="confirmed" from="Einstellungen/ConfirmationDialog3" to="Einstellungen" method="_on_ConfirmationDialog3_confirmed"]
+
+[connection signal="value_changed" from="Einstellungen/ConfirmationDialog3/MarginContainer/VBoxContainer/HBoxContainer/SpinBox_Zyklen" to="Einstellungen" method="_on_SpinBox_Zyklen_value_changed"]
+
+[connection signal="confirmed" from="Einstellungen/FileDialog" to="Einstellungen" method="_on_FileDialog_confirmed"]
+
+

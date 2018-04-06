@@ -1,0 +1,100 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scene/Arbeitsplatte/Pipettieren.gd" type="Script" id=1]
+[ext_resource path="res://Scene/Arbeitsplatte/PipettenRack.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Texture/spitzenboxweiss.png" type="Texture" id=3]
+[ext_resource path="res://Texture/spitzenboxgelb.png" type="Texture" id=4]
+[ext_resource path="res://Texture/spitzenboxblau.png" type="Texture" id=5]
+
+[node name="Pipettieren" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="PipettenRack" parent="." index="0" instance=ExtResource( 2 )]
+
+[node name="SpitzenboxWeiss" type="Node2D" parent="." index="1"]
+
+position = Vector2( 840, 200 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="SpitzenboxWeissTex" type="TextureRect" parent="SpitzenboxWeiss" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 120.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+
+[node name="SpitzenboxGelb" type="Node2D" parent="." index="2"]
+
+position = Vector2( 965, 200 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="SpitzenboxGelbTex" type="TextureRect" parent="SpitzenboxGelb" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 120.0
+margin_bottom = 90.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+
+[node name="SpitzenboxBlau" type="Node2D" parent="." index="3"]
+
+position = Vector2( 1090, 200 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="SpitzenboxBlauTex" type="TextureRect" parent="SpitzenboxBlau" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 104.0
+margin_bottom = 94.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 5
+_sections_unfolded = [ "Rect" ]
+
+[connection signal="mouse_entered" from="SpitzenboxWeiss/SpitzenboxWeissTex" to="." method="_on_SpitzenboxWeiss_mouse_entered"]
+
+[connection signal="mouse_exited" from="SpitzenboxWeiss/SpitzenboxWeissTex" to="." method="_on_Spitzenbox_mouse_exited"]
+
+[connection signal="mouse_entered" from="SpitzenboxGelb/SpitzenboxGelbTex" to="." method="_on_SpitzenboxGelb_mouse_entered"]
+
+[connection signal="mouse_exited" from="SpitzenboxGelb/SpitzenboxGelbTex" to="." method="_on_Spitzenbox_mouse_exited"]
+
+[connection signal="mouse_entered" from="SpitzenboxBlau/SpitzenboxBlauTex" to="." method="_on_SpitzenboxBlau_mouse_entered"]
+
+[connection signal="mouse_exited" from="SpitzenboxBlau/SpitzenboxBlauTex" to="." method="_on_Spitzenbox_mouse_exited"]
+
+

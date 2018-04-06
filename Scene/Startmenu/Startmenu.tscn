@@ -1,0 +1,812 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scene/Startmenu/Startmenu.gd" type="Script" id=1]
+[ext_resource path="res://Texture/Labor_Panorama.jpg" type="Texture" id=2]
+[ext_resource path="res://Scene/Startmenu/Popup_Prepare.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Animation_Background"
+length = 19.0
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Labor_Panorama:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 9, 10 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 678.939, 389 ), Vector2( 678.939, 389 ), Vector2( 554.159, 389 ), Vector2( 554.159, 389 ) ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "Animation_Game_Menu_Growing"
+length = 0.7
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Background_Game_Menu:rect_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Background_Game_Menu:rect_position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 610, 361 ), Vector2( 544, 245 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("GameMenu:rect_position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 634, 372 ), Vector2( 568, 256 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("GameMenu:rect_scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.1, 0.1 ), Vector2( 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("GameMenu:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Startmenu" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+
+[node name="Labor_Panorama" type="Sprite" parent="." index="0"]
+
+position = Vector2( 554.159, 389 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Offset", "Transform" ]
+
+[node name="Background_Game_Menu" type="Panel" parent="." index="1"]
+
+modulate = Color( 1, 1, 1, 0.8 )
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 557.0
+margin_top = 247.0
+margin_right = 810.0
+margin_bottom = 489.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Margin", "Material", "Rect", "Visibility" ]
+
+[node name="GameMenu" type="VBoxContainer" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 568.0
+margin_top = 256.0
+margin_right = 774.0
+margin_bottom = 512.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 20
+alignment = 0
+_sections_unfolded = [ "Rect", "Visibility" ]
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Spiel_starten" type="Button" parent="GameMenu" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 206.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Spiel starten"
+flat = false
+align = 1
+
+[node name="Spiel_vorbereiten" type="Button" parent="GameMenu" index="1"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 40.0
+margin_right = 206.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Szenario auswählen"
+flat = false
+align = 1
+
+[node name="Tutorial" type="Button" parent="GameMenu" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 40.0
+margin_right = 206.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Tutorial"
+flat = false
+align = 1
+
+[node name="Hilfe" type="Button" parent="GameMenu" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 80.0
+margin_right = 206.0
+margin_bottom = 100.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Hilfe"
+flat = false
+align = 1
+
+[node name="About" type="Button" parent="GameMenu" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 120.0
+margin_right = 206.0
+margin_bottom = 140.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "About"
+flat = false
+align = 1
+
+[node name="Spiel beenden" type="Button" parent="GameMenu" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 160.0
+margin_right = 206.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "Spiel beenden"
+flat = false
+align = 1
+
+[node name="Popup_Hilfe" type="WindowDialog" parent="." index="3"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 328.0
+margin_top = 130.0
+margin_right = 974.0
+margin_bottom = 585.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+window_title = "Grundlagen zum Spiel"
+resizable = false
+_sections_unfolded = [ "Rect" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup_Hilfe" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 641.0
+margin_bottom = 450.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Margin", "Rect" ]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Popup_Hilfe/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_right = 636.0
+margin_bottom = 445.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+scroll_horizontal_enabled = true
+scroll_horizontal = 0
+scroll_vertical_enabled = true
+scroll_vertical = 0
+
+[node name="Label_Hilfe_Text" type="Label" parent="Popup_Hilfe/MarginContainer/ScrollContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 607.0
+margin_bottom = 609.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Hier erhalten Sie eine kurze Beschreibung zu den Grundlagen dieses Spiels.
+
+Pipette
+Die Pipette kann mit der linken Maustaste aufgehoben werden und mit der rechten wieder 
+auf die Ablage zurück gelegt werden. Um eine Spitze anzulegen klicken Sie mit der linken 
+Maustaste auf die entsprechende Spitzenbox. Durch Rechtsklick kann diese wieder in den 
+Mülleimer entsorgt  werden. Durch das Mausrad lässt sich das Volumen einstellen, 
+anschließend ist durch Linksklick auf das Puffer/ Biomolekül/ Reagenz aufnehmen von 
+Flüssigkeit möglich. Die Flüssigkeit lässt sich durch Linksklick auf Tubes/ Mikrotiterplatte 
+abgeben.
+
+Tube
+Die Tubes lassen sich durch die linke Maustaste aus dem Tubevorrat entnehmen und durch
+Rechtsklick wieder ablegen. Sie können die Tubes direkt in das Rack ablegen. Tubes lassen
+sich auch durch Rechtsklick auf den Mülleimer entsorgen.
+
+Rack
+Das Rack lässt sich durch die linke Maustaste anheben und mit der R-Taste rotieren. Um
+das Rack wieder abzulegen betätigen Sie die rechte Maustaste.
+
+Mikrotiterplatte
+Die Mikrotiterplatte lässt sich durch die linke Maustaste anheben und mit der R-Taste rotieren.
+Um die Mikrotiterplatte wieder abzulegen betätigen Sie die rechte Maustaste.
+
+Vorratsschrank
+Im Vorratsschrank können Sie das Material, welches Sie für Ihr Experiment brauchen,
+durch die linke Maustaste auswählen. Diese werden anschließend auf der Arbeitsplatte für 
+Sie bereitgestellt.
+
+Navigationsleiste
+Durch Linksklick auf die ensprechenden Buttons können Sie zwischen den Szenen wechseln.
+
+Notizblock
+Der Notizblock wird durch die linke Maustaste angewählt und kann somit beschrieben werden.
+
+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Popup_About" type="WindowDialog" parent="." index="4"]
+
+editor/display_folded = true
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 332.0
+margin_top = 126.0
+margin_right = 978.0
+margin_bottom = 581.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+window_title = "About"
+resizable = false
+_sections_unfolded = [ "Rect" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup_About" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 641.0
+margin_bottom = 450.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+_sections_unfolded = [ "Margin", "Rect" ]
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Popup_About/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_right = 636.0
+margin_bottom = 445.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+scroll_horizontal_enabled = true
+scroll_horizontal = 0
+scroll_vertical_enabled = true
+scroll_vertical = 0
+
+[node name="Label_About_Text" type="Label" parent="Popup_About/MarginContainer/ScrollContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 610.0
+margin_bottom = 507.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Version: 1.0
+
+Adrian Wagener <adrian.wagener@stud.tu-darmstadt.de>
+Benedikt Julian Dreher <benediktjulian.dreher@stud.tu-darmstadt.de>
+Ivelin Marinov Ivanov <ivelin_marinov.ivanov@stud.tu-darmstadt.de>
+Olcay Ece <olcay.ece@stud.tu-darmstadt.de>
+Patrick Singh <patrick.singh@stud.tu-darmstadt.de>
+
+Softwarelizenz:
+
+Copyright 2017 Adrian Wagener, Benedikt Julian Dreher, Ivelin Marinov Ivanov, Olcay Ece,
+Patrick Singh, Kay Hamacher and Katja Schmitz
+Permission is hereby granted, free of charge, to any person obtaining 
+a copy of this software and associated documentation files (the \"Software\"),
+to deal in the Software without restriction, including without limitation 
+the rights to use, copy, modify, merge, publish, distribute, sublicense, 
+and/or sell copies of the Software, and to permit persons to whom the Software 
+is furnished to do so, subject to the following conditions: 
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, 
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES 
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
+DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
+ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR 
+OTHER DEALINGS IN THE SOFTWARE.
+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="5"]
+
+root_node = NodePath("..")
+autoplay = "Animation_Background"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Animation_Background = SubResource( 1 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="." index="6"]
+
+root_node = NodePath("..")
+autoplay = "Animation_Game_Menu_Growing"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Animation_Game_Menu_Growing = SubResource( 2 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="Popup_Prepare" type="AcceptDialog" parent="." index="7"]
+
+visible = false
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 357.0
+margin_top = 193.0
+margin_right = 903.0
+margin_bottom = 593.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+popup_exclusive = false
+window_title = "Auswahl des Szenario"
+resizable = false
+dialog_hide_on_ok = true
+script = ExtResource( 3 )
+_sections_unfolded = [ "Popup", "Rect" ]
+
+[node name="MarginContainer" type="MarginContainer" parent="Popup_Prepare" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = 538.0
+margin_bottom = 364.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Popup_Prepare/MarginContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 8.0
+margin_right = 530.0
+margin_bottom = 356.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = true
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+scroll_horizontal_enabled = true
+scroll_horizontal = 0
+scroll_vertical_enabled = true
+scroll_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup_Prepare/MarginContainer/ScrollContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 495.0
+margin_bottom = 126.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_constants/separation = 15
+alignment = 0
+_sections_unfolded = [ "custom_constants" ]
+
+[node name="Beschreibung" type="Label" parent="Popup_Prepare/MarginContainer/ScrollContainer/VBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 495.0
+margin_bottom = 31.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Bitte wählen Sie das Szenario aus. 
+Die Auswahl kann nur durch einen Neustart der Anwendung geändert werden!"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup_Prepare/MarginContainer/ScrollContainer/VBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 46.0
+margin_right = 495.0
+margin_bottom = 66.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+alignment = 0
+
+[node name="Grundszenario" type="OptionButton" parent="Popup_Prepare/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 39.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+
+[node name="Szenario_Proteinkonzentration" type="OptionButton" parent="Popup_Prepare/MarginContainer/ScrollContainer/VBoxContainer/HBoxContainer" index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 43.0
+margin_right = 82.0
+margin_bottom = 20.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+action_mode = 0
+enabled_focus_mode = 2
+shortcut = null
+group = null
+flat = false
+align = 0
+items = [  ]
+selected = -1
+
+[node name="Szenario1" type="Label" parent="Popup_Prepare/MarginContainer/ScrollContainer/VBoxContainer" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 81.0
+margin_right = 495.0
+margin_bottom = 180.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Im Vorratsschrank finden Sie mehrere Biomoleküle und fluoreszent markierte Reagenzien. Wählen Sie eine dieser Substanzen aus und bestimmen Sie den Extinktionskoeffizienten mithilfe einer Konzentrationsreihe. (Gehen Sie dabei davon aus, dass 100 µL Flüssigkeit in einer 96erMikrotiterplatte eine Schichtdicke von 2,75 mm ergeben.)
+"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Szenario2_a" type="Label" parent="Popup_Prepare/MarginContainer/ScrollContainer/VBoxContainer" index="3"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 195.0
+margin_right = 495.0
+margin_bottom = 260.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Im Vorratsschrank finden Sie unter „Biomoleküle“ eine Lösung von Interleukin-8 und unter „Reagenz“ eine Probe desselben Proteins, deren Konzentration unbekannt ist. Bestimmen Sie deren Konzentration mithilfe einer Konzentrationsreihe."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Szenario2_b" type="Label" parent="Popup_Prepare/MarginContainer/ScrollContainer/VBoxContainer" index="4"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 275.0
+margin_right = 495.0
+margin_bottom = 357.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Im Vorratsschrank finden Sie unter „Biomoleküle“ eine Lösung von Rinderserumalbumin (BSA) und unter „Reagenz“ eine Probe von Interleukin-8, deren Konzentration unbekannt ist. Schätzen Sie deren Konzentration mithilfe einer Konzentrationsreihe von BSA ab. (Warum ist eine exakte Bestimmung der Konzentration hier nicht möglich?)"
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Szenario3" type="Label" parent="Popup_Prepare/MarginContainer/ScrollContainer/VBoxContainer" index="5"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_top = 372.0
+margin_right = 495.0
+margin_bottom = 505.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Im Vorratsschrank finden Sie Sie unter „Biomoleküle“ eine Lösung von Interleukin-8 und unter „Reagenz“ mehrere potenzielle Bindepeptide, die mit Fluorescein markiert sind. Wählen Sie eines der Peptide aus und ermitteln Sie dessen Dissoziationskonstante zu Interleukin 8, indem Sie verschiedene Konzentrationen von Interleukin-8 zu einer konstanten Konzentration (100 nM) des Peptids pipettieren. Die Messreihe wird in Mehrfachbestimmung im Fluoreszenz- und Fluoreszenzpolarisationsmodus vermessen, um eine Bindungsisotherme zu erstellen und daraus KD zu ermitteln."
+autowrap = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="pressed" from="GameMenu/Spiel_starten" to="." method="_on_Spiel_starten_pressed"]
+
+[connection signal="pressed" from="GameMenu/Spiel_vorbereiten" to="." method="_on_Spiel_vorbereiten_pressed"]
+
+[connection signal="pressed" from="GameMenu/Tutorial" to="." method="_on_Tutorial_pressed"]
+
+[connection signal="pressed" from="GameMenu/Hilfe" to="." method="_on_Hilfe_pressed"]
+
+[connection signal="pressed" from="GameMenu/About" to="." method="_on_About_pressed"]
+
+[connection signal="pressed" from="GameMenu/Spiel beenden" to="." method="_on_Spiel_beenden_pressed"]
+
+[connection signal="confirmed" from="Popup_Prepare" to="Popup_Prepare" method="_on_Popup_Prepare_confirmed"]
+
+[connection signal="game_start" from="Popup_Prepare" to="." method="_on_Popup_Prepare_game_start"]
+
+
